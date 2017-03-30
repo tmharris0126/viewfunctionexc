@@ -1,35 +1,9 @@
 import Store from './store.js'
-
-export default function app() {
-// a) Create a form that saves a blog post to tiny-za-server. The post should have a title and a body.
-// It does not need to display blog posts, just save them. The HTML should exist in a view function.
+import Blog from './blog.js'
+import Users from './users.js'
 
 
-    let giveMesomething = '<form>Say Something</form>';
-
-    var server = {
-        type: 'POST',
-        url: 'http://tiny-za-server.herokuapp.com/collections/viewfuncterrell',
-        contentType: 'application/json',
-        data: JSON.stringify({
-            'First Name': '',
-            'Last Name': '',
-            'Address': '',
-            'Phone Number': ''
-        }),
-        success: function(result) {
-            // $('#app').html(result);
-        }
-    };
-    $.ajax(server);
-
-    $('#form').on('submit', function(e) {
-      e.preventDefault();
-
-// add content that will appear in form when input
-    })
-
-}
+export default function app(){
 
 
 
@@ -74,4 +48,4 @@ export default function app() {
 //  store.add(update);
 //  store.add(render);
 //  store.fire("hello_world"); // Feel free to delete. This is just an example.
-// }
+}
